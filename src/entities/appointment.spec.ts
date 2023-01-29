@@ -5,8 +5,8 @@ import { getFutureDate } from '../tests/utils/get-future-date'
 
 
 test('create an appointment', () => {
-  const startsAt = getFutureDate('2022-08-10')
-  const endsAt = getFutureDate('2022-08-11')
+  const startsAt = getFutureDate('2023-08-10')
+  const endsAt = getFutureDate('2023-08-11')
 
   const appointment = new Appointment({
     customer: 'John Doe',
@@ -18,8 +18,8 @@ test('create an appointment', () => {
 })
 
 test('cannot create an appointment with end date before start date', () => {
-  const startsAt = getFutureDate('2022-08-10')
-  const endsAt = getFutureDate('2022-08-09')
+  const startsAt = getFutureDate('2023-08-10')
+  const endsAt = getFutureDate('2023-08-09')
 
   expect(() => {
     return new Appointment({

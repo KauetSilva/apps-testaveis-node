@@ -9,10 +9,11 @@ interface CreateAppointmentRequest {
 
 type CreateAppointmentResponse = Appointment;
 
-export class CreateAppointment {
-  constructor (private appointmentsRepository: AppointmentsRepository) {
 
-  }
+export class CreateAppointment {
+  constructor(
+    private appointmentsRepository: AppointmentsRepository
+  ) {}
 
   async execute ({
     customer, 
